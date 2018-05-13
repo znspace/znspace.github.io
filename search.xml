@@ -59,17 +59,17 @@
   
     
     <entry>
+      <title></title>
+      <url>/categories/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[About]]></title>
       <url>/about/index.html</url>
       <content type="html"><![CDATA[<p><img src="https://" alt="" style="width:100%"></p>
 <p>啦啦啦~</p>
 ]]></content>
-    </entry>
-    
-    <entry>
-      <title></title>
-      <url>/categories/index.html</url>
-      <content type="html"></content>
     </entry>
     
   
