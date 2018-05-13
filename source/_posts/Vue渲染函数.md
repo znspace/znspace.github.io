@@ -2,17 +2,30 @@
 title: Vue渲染函数
 date: 2018-01-31 10:33:04
 tags: Vue
+image: ''
+categories: 技术
 ---
-## Vue渲染函数
-----------
-### 虚拟 DOM
+
+# Vue 渲染函数
+
+---
+
+<img src="https://www.lifeofpix.com/wp-content/uploads/2018/04/Old-Harry-Rocks-1600x2000.jpg" alt="" style="width:100%" />
+
+<!-- more -->
+
+## 虚拟 DOM
+
 Vue 通过建立一个虚拟 DOM 对真实 DOM 发生的变化保持追踪。请近距离看一下这行代码
+
 ```javaScript
 return createElement('h1', this.blogTitle)
 ```
+
 `createElement` 到底会返回什么呢？其实不是一个实际的 DOM 元素。它更准确的名字可能是 `createNodeDescription`，因为它所包含的信息会告诉 Vue 页面上需要渲染什么样的节点，及其子节点。我们把这样的节点描述为“虚拟节点 (Virtual Node)”，也常简写它为“VNode”。“虚拟 DOM”是我们对由 Vue 组件树建立起来的整个 VNode 树的称呼。
 
-### `createElement` 参数
+## `createElement` 参数
+
 ```js
 // @returns {VNode}
 createElement(
@@ -25,7 +38,7 @@ createElement(
   // 一个包含模板相关属性的数据对象
   // 这样，您可以在 template 中使用这些属性。可选参数。
   {
-    // 
+    //
   },
 
   // {String | Array}
@@ -40,9 +53,11 @@ createElement(
       }
     })
   ]
-)
+);
 ```
-### `createElement` Object详细属性
+
+## `createElement` Object 详细属性
+
 ```js
 {
   // 和`v-bind:class`一样的 API
@@ -102,7 +117,4 @@ createElement(
   key: 'myKey',
   ref: 'myRef'
 }
-
 ```
-
-

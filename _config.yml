@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: "My Blob Space"
-subtitle:
-description:
-author: 'ZhouNan'
-language: zh-CN
+title: My Blob Space
+subtitle: '临兵斗者皆阵列在前'
+description: 临兵斗者皆阵列在前
+author: ZhouNan
+language: zh-Hans
 timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: 'https://znspace.github.io/'
+url: https://znspace.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -40,7 +40,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true # 代码自动高亮
   tab_replace:
   
 # Home page setting
@@ -53,7 +53,7 @@ index_generator:
   order_by: -date
   
 # Category & Tag
-default_category: uncategorized
+default_category: uncategorized # URL 中的分类和标签“翻译”成英文
 category_map:
 tag_map:
 
@@ -69,6 +69,36 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
+## 修改归档页面、某一分类页面、某一标签页面的显示篇数
+## 参考：http://theme-next.iissnan.com/faqs.html#setting-page-size
+archive_generator:
+  per_page: 0
+  yearly: false
+  monthly: false
+  daily: false
+
+category_generator:
+  per_page: 0
+
+tag_generator:
+  per_page: 0
+
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+
+# RSS，要先进入站点文件夹根目录安装插件
+# npm install hexo-generator-feed --save 即可
+# 无需更多配置
+# 参数说明查看 README：https://github.com/hexojs/hexo-generator-feed
+feed:
+  type: atom
+  path: atom.xml
+# 文章数，0 为全部
+  limit: 0
+  hub:
+# 是否包含文章内容
+  content: true
 
 # 自定义站点内容搜索
 # 需要先安装插件：
@@ -78,10 +108,9 @@ search:
   # 如只想索引文章，可设置为post
   field: all
 
-# Extensions
-## Plugins: https://hexo.io/plugins/
+
 ## Themes: https://hexo.io/themes/
-theme: material
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
