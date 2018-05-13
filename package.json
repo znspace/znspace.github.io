@@ -1,10 +1,19 @@
 {
   "name": "hexo-site",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "ZN's Blog",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZNspace/znspace.github.io.git"
+  },
+  "keywords": ["NexT", "Hexo", "Neveryu", "Blog"],
+  "author": "ZhouNan <zn1304610@gmail.com>",
+  "homepage": "https://zncloud.xin/",
   "hexo": {
     "version": "3.7.1"
   },
+  "license": "MIT",
   "dependencies": {
     "hexo": "^3.7.1",
     "hexo-deployer-git": "^0.3.1",
@@ -19,5 +28,12 @@
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0",
     "hexo-wordcount": "^3.0.2"
+  },
+  "scripts": {
+    "dev-proxy": "gulp",
+    "dev": "hexo clean && hexo generate && hexo server --debug",
+    "predeploy": "echo 'Start deploy'",
+    "deploy": "hexo clean && hexo generate && gulp min && hexo deploy",
+    "postdeploy": "echo 'Finished deploy'"
   }
 }

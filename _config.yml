@@ -116,5 +116,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/ZNspace/znspace.github.io.git
+  repo: git@github.com:ZNspace/znspace.github.io.git
   branch: master
