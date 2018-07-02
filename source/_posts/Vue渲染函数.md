@@ -8,8 +8,6 @@ categories: 技术
 
 # Vue 渲染函数
 
----
-
 <img src="https://www.lifeofpix.com/wp-content/uploads/2018/04/Old-Harry-Rocks-1600x2000.jpg" alt="" style="width:100%" />
 
 <!-- more -->
