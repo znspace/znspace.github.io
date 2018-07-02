@@ -1893,7 +1893,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bfff63;
+  background: #bb2fff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3000,4 +3000,61 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+.post {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 14px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 14px rgba(202,203,204,0.5);
+}
+.ds-top-threads li a {
+  padding-left: 5px;
+  transition: border-width 0.2s linear 0s, color 0.2s linear 0s;
+  border-bottom: none;
+}
+.ds-top-threads li a:hover {
+  border-left: 8px solid #4d768c;
+}
+.footer {
+  background: none;
+  font-size: 16px;
+}
+.footer-inner {
+  font-family: 'Comic Sans MS', sans-serif;
+  text-align: center;
+}
+.sidebar {
+  box-shadow: inset 2px 2px 40px #bdb2b2;
+}
+.post-toc .nav .active > a {
+  color: #4f7e96;
+}
+.post-toc ol a:hover {
+  color: #7784ba;
+}
+.sidebar-nav .sidebar-nav-active:hover {
+  color: #37596c;
+}
+a {
+  border-bottom: none;
+}
+.post-button {
+  margin-top: 30px;
+  text-align: center;
+}
+.post-button .btn {
+  color: #fff;
+  font-size: 15px;
+  background: #686868;
+  border-radius: 16px;
+  line-height: 2;
+  margin: 0 4px 8px 4px;
+  padding: 0 20px;
+}
+.post-button a {
+  border-bottom: 1px solid #666;
+}
+.post-button a:hover {
+  color: #7784ba;
 }
