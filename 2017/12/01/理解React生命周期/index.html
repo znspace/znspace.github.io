@@ -128,19 +128,19 @@
 
 
 
-<meta name="description" content="理解React生命周期">
+<meta name="description" content=" 理解 React 生命周期">
 <meta name="keywords" content="React">
 <meta property="og:type" content="article">
 <meta property="og:title" content="理解React生命周期">
 <meta property="og:url" content="https://znspace.github.io/2017/12/01/理解React生命周期/index.html">
 <meta property="og:site_name" content="My Blob Space">
-<meta property="og:description" content="理解React生命周期">
+<meta property="og:description" content=" 理解 React 生命周期">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://www.lifeofpix.com/wp-content/uploads/2018/04/Glen-Etive-1600x1067.jpg">
-<meta property="og:updated_time" content="2018-07-02T02:48:38.923Z">
+<meta property="og:updated_time" content="2018-07-02T03:02:54.394Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="理解React生命周期">
-<meta name="twitter:description" content="理解React生命周期">
+<meta name="twitter:description" content=" 理解 React 生命周期">
 <meta name="twitter:image" content="https://www.lifeofpix.com/wp-content/uploads/2018/04/Glen-Etive-1600x1067.jpg">
 
 
@@ -417,7 +417,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  945
+                  944
                 </span>
               
 
@@ -454,7 +454,7 @@
       
 
       
-        <h1 id="理解React生命周期"><a href="#理解React生命周期" class="headerlink" title="理解React生命周期"></a>理解React生命周期</h1><p><img src="https://www.lifeofpix.com/wp-content/uploads/2018/04/Glen-Etive-1600x1067.jpg" alt="" style="width:100%"></p>
+        <h1 id="理解-React-生命周期"><a href="#理解-React-生命周期" class="headerlink" title=" 理解 React 生命周期"></a> 理解 React 生命周期</h1><p><img src="https://www.lifeofpix.com/wp-content/uploads/2018/04/Glen-Etive-1600x1067.jpg" alt="" style="width:100%"></p>
 <a id="more"></a>
 <p>React 组件的生命周期有三个主要场景：</p>
 <ul>
@@ -463,7 +463,7 @@
 <li><strong>卸载（Unmounting）</strong>：组件从 DOM 中移除。</li>
 </ul>
 <p>不同的场景会调用不同的生命周期方法，包含 <code>will</code> 的方法在某个时间节点之前执行，包含 did 方法在某个时间节点之后执行。</p>
-<h2 id="初始渲染（装载）"><a href="#初始渲染（装载）" class="headerlink" title="初始渲染（装载）"></a>初始渲染（装载）</h2><p><strong>getDefaultProps</strong></p>
+<h2 id="初始渲染（装载）"><a href="#初始渲染（装载）" class="headerlink" title=" 初始渲染（装载）"></a> 初始渲染（装载）</h2><p><strong>getDefaultProps</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object getDefaultProps()</span><br></pre></td></tr></table></figure>
 <p>该方法在 <strong>组件创建时（createClass）</strong> 执行一次并缓存返回值。如果组件使用时未设置属性，就从缓存中读取默认属性。<strong>注意：</strong> <code>getDefaultProps()</code> 返回的缓存数据会在所有实例间共享。</p>
 <blockquote>
@@ -473,10 +473,10 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object getInitialState()</span><br></pre></td></tr></table></figure>
 <p>组件装载之前执行一次，返回值用作 <code>this.state</code> 的初始值。</p>
 <p><strong>componentWillMount</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> componentWillMount()</span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> componentWillMount();</span><br></pre></td></tr></table></figure>
 <p>初始渲染之前执行一次，前后端都有。如果在该方法中调用 <code>setState</code>，<code>render()</code> 将接收到更新后的数据，并且只会执行一次（即使状态已经改变）。</p>
 <p><strong>componentDidMount</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> componentDidMount()</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> componentDidMount();</span><br></pre></td></tr></table></figure>
 <p>初始渲染完成后立即执行一次，只在客户端执行（服务器端没有）。</p>
 <p>子组件的 <code>componentDidMount()</code> 方法先于父组件之前执行，此时可以操作子组件的任何引用（如操作子组件 DOM）。</p>
 <p>在此方法中可进行：</p>
@@ -487,7 +487,7 @@
 <li>绑定 DOM 事件；</li>
 <li>……</li>
 </ul>
-<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p>更新会在 React 组件初始渲染之后、卸载之前多次发生，属性、状态改变都会触发更新。</p>
+<h2 id="更新"><a href="#更新" class="headerlink" title=" 更新"></a> 更新</h2><p>更新会在 React 组件初始渲染之后、卸载之前多次发生，属性、状态改变都会触发更新。</p>
 <p><strong>componentWillReceiveProps</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> componentWillReceiveProps(</span><br><span class="line">  object nextProps, object nextContext</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <p>组件即将接收新属性之前执行，初始渲染不执行。</p>
@@ -513,8 +513,9 @@
 <p><strong>componentDidUpdate</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> componentDidUpdate(</span><br><span class="line">  object prevProps, object prevState, object prevContext</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <p>组件更新后立即执行，初始渲染不执行。可用作操作发生变化 DOM 的时机。</p>
-<p>##卸载</p>
-<p><strong>componentWillUnmount</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> componentWillUnmount()</span><br></pre></td></tr></table></figure></p>
+<p>##卸载##</p>
+<p><strong>componentWillUnmount</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> componentWillUnmount();</span><br></pre></td></tr></table></figure>
 <p>组件即将从 DOM 中卸载之前执行，可在此进行定时器清除、事件解绑等清理工作。</p>
 
       
@@ -756,7 +757,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#理解React生命周期"><span class="nav-number">1.</span> <span class="nav-text">理解React生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始渲染（装载）"><span class="nav-number">1.1.</span> <span class="nav-text">初始渲染（装载）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新"><span class="nav-number">1.2.</span> <span class="nav-text">更新</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#理解-React-生命周期"><span class="nav-number">1.</span> <span class="nav-text"> 理解 React 生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始渲染（装载）"><span class="nav-number">1.1.</span> <span class="nav-text"> 初始渲染（装载）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新"><span class="nav-number">1.2.</span> <span class="nav-text"> 更新</span></a></li></ol></li></ol></div>
             
 
           </div>
